@@ -21,6 +21,14 @@ export interface NavItem {
   url: string;
 }
 
+export interface CallToAction {
+  title: string;
+  url: string;
+  icon: string;
+  isDownloadingFile: boolean;
+  target?: string;
+}
+
 export interface ShowcaseSite {
   title: string;
   image: ImageMetadata;

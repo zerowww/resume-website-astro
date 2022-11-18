@@ -1,33 +1,46 @@
 ---
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
-import type { NavItem } from "~/types";
+import type { CallToAction, NavItem } from "~/types";
 
-const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+const navItems: NavItem[] = [
+  { title: "L'Essentiel", url: "#core-informations" },
+  { title: "Services", url: "#services" },
+  { title: "Stack Technique", url: "#technical-stack" },
+  { title: "Clients", url: "#clients" },
+  { title: "Recommendations", url: "#referrals" },
+];
+
+const callToActions: CallToAction[] = [
+  {
+    title: "LinkedIn",
+    icon: "mdi:linkedin",
+    isDownloadingFile: false,
+    url: "https://www.linkedin.com/in/alexandre-martinez31000",
+    target: "_blank",
+  },
+  {
+    title: "CV",
+    icon: "ic:baseline-file-download",
+    isDownloadingFile: true,
+    url: "",
+  },
 ];
 ---
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent"
+  class="absolute bottom-0 z-20 flex items-center justify-between w-full px-8 py-4 text-white border-b border-transparent flex gap-12"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
-  </a>
   <div>
     <div class="flex items-center gap-6">
-      <nav class="hidden sm:block">
+      <nav class="hidden lg:block">
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
               <li>
                 <a class="text-sm" href={url}>
-                  {title}
+                  <span>{title}</span>
                 </a>
               </li>
             ))
@@ -37,7 +50,7 @@ const navItems: Array<NavItem> = [
       <button
         id="open-nav-button"
         type="button"
-        class="btn sm:hidden"
+        class="btn lg:hidden"
         aria-label="Navigation"
       >
         <Icon pack="mdi" name="menu" class="h-8" />
@@ -76,6 +89,21 @@ const navItems: Array<NavItem> = [
         </div>
       </div>
     </div>
+  </div>
+  <div class="flex gap-6">
+    {
+      callToActions.map(({ title, url, icon, isDownloadingFile, target }) => (
+        <a
+          class="flex items-center gap-3 text-sm border-2 border-current p-2 sm:pr-4"
+          href={url}
+          target={target}
+          download={isDownloadingFile}
+        >
+          <Icon name={icon} class="h-10" />
+          <span class="hidden sm:block">{title}</span>
+        </a>
+      ))
+    }
   </div>
 </header>
 
