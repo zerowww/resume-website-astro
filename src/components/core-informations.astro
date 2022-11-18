@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+
+const today = new Date();
+---
+
+<ContentSection title="En Résumé" id="core-informations">
+  <Fragment slot="lead">
+    À ce jour {today.toLocaleDateString()}, je suis <span class="text-primary"
+      >disponible</span
+    > au recrutement sous contrat freelance. Je recherche un <span
+      class="text-primary">poste de Tech Lead</span
+    > autour de l'écosystème <span class="text-primary">Angular.</span>
+    Vous trouverez mon CV et un lien direct amenant à mon profil LinkedIn juste dessous.
+    <Icon name="ic:round-arrow-circle-down" class="h-8 mx-auto" />
+  </Fragment>
+
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="https://docs.astro.build/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="linkedin" class="h-8" />
+      <span>Profil LinkedIn</span>
+    </a>
+    <a
+      href="https://astro.new/"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+    >
+      <Icon pack="mdi" name="file-document" class="h-8" />
+      <span>Télécharger le CV</span>
+    </a>
+  </div>
+</ContentSection>
