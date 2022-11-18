@@ -1,10 +1,8 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
 import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
-import GitHubCorner from "./github-corner.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -12,29 +10,32 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 
 <section class="relative h-full bg-black">
   <Starfield />
-  <GitHubCorner />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative grid h-full sm:grid-cols-2 place-items-center">
-    <h2
-      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
+  <div class="relative grid h-full sm:grid-cols-12 place-items-center">
+    <h1
+      class="flex flex-col self-end gap-12 sm:self-auto items-center sm:justify-self-end sm:col-span-7"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
       <div
-        class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
+        class="font-extrabold tracking-tighter text-center text-6xl lg:text-8xl gradient-text"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        Alexandre Martinez
+        <br /> Angular 
+        <br /> Tech Lead
       </div>
-    </h2>
+      <span id="intro" class="bg-offset text-center lg:text-xl max-w-lg ml-4">
+        D'un naturel curieux, j'accorde une grande importance à la bonne entente
+        au sein de l'équipe ainsi qu'à l'esprit Craftsman tourné vers la
+        production de qualité !
+      </span>
+    </h1>
     <div
       id="astronaut"
-      class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start"
+      class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start sm:col-span-5"
     >
       <Picture
-        class="object-cover w-full h-full"
+        class="object-cover w-full h-full scale-150"
         src={astronautImage}
         widths={widths}
         sizes={sizes}
@@ -61,6 +62,14 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     100% {
       transform: translate3d(0, 30px, 0);
     }
+  }
+
+  #intro {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    filter: drop-shadow(1rem -0.3rem 0.4rem var(--color-background-offset))
+      drop-shadow(1rem 0.3rem 0.4rem var(--color-background-offset))
+      drop-shadow(-1rem 0.3em 0.4rem var(--color-background-offset))
+      drop-shadow(-1rem -0.3rem 0.4rem var(--color-background-offset));
   }
 
   #astronaut {
