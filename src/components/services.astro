@@ -1,0 +1,65 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { ServiceItem } from "~/types";
+
+const services: ServiceItem[] = [
+  {
+    title: "Orientation Technique",
+    description:
+      "Le bon outil pour le bon besoin. En fonction des features en prévision, du niveau technique de l'équipe, des contraintes ~e.g performance, deadline établie, legacy en place, type d'utilisateur~ ...",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "Accompagnement sur les tests automatisés",
+    description: `Quelle tranquillité d'esprit d'ajouter une nouvelle fonctionnalité sans briser les précédentes ! Tout projet sérieux mérite de profiter des tests unitaires, des tests E2E ...`,
+    icon: "fluent:arrow-sync-checkmark-20-filled",
+  },
+  {
+    title: "Garant du respect des bonnes pratiques",
+    description:
+      "Mener les code review, établir en équipe la documentation technique, mettre en place des outils de linting, tout cela contribue à la maintenabilité ~et on se pose moins de question~ !",
+    icon: "bi:gem",
+  },
+  {
+    title: "Mentorat",
+    description:
+      "Niveler le niveau de l'équipe vers le haut, personne n'est indispensable ~et personne ne devrait l'être~. Amener vers l'autonomie complète et la pluralité des compétences.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Avant tout développeur",
+    description:
+      "Bien évidemment je mets la main à la patte ! La veille technique et ma curiosité naturelle sont mes meilleures armes pour élargir et aiguiser mes connaissances.",
+    icon: "mdi:robot-love",
+  },
+  {
+    title: "Toujours souriant ~et la blague qui va avec~",
+    description: "C'est tout de même plus agréable de travailler dans la bonne humeur ! Je m'attache à créer une ambiance productive en m'appuyant sur la bonne entente collective.",
+    icon: "bi:emoji-smile-upside-down",
+  },
+];
+---
+
+<ContentSection title="Mes Services" id="services">
+  <Fragment slot="lead"
+    >Fort de mes 4 années d'expérience au service de clients et projets variés,
+    l'<span class="text-primary">expertise</span> que j'ai développé me permet d'orienter
+    les décisions techniques du produit, créant un outil <span
+      class="text-primary">fiable</span
+    > et <span class="text-primary">performant.</span>
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      services.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 p-6 border border-default bg-offset">
+          <div class="w-16 h-16 p-3 border-2 border-current rounded-full">
+            <Icon name={icon} />
+          </div>
+          <p class="text-xl font-extrabold text-center">{title}</p>
+          <p class="text-sm text-center text-offset">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
