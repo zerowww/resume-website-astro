@@ -1,0 +1,122 @@
+---
+import TechList from "~/components/tech-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { TechItem } from "~/types";
+
+const frontEndTechs: TechItem[] = [
+  {
+    title: "Angular",
+    icon: "mdi:angular",
+    url: "https://angular.io",
+  },
+  {
+    title: "NgRx",
+    icon: "file-icons:ngrx",
+    url: "https://ngrx.io",
+  },
+  {
+    title: "GraphQL",
+    icon: "mdi:graphql",
+    url: "https://graphql.org",
+  },
+  {
+    title: "Sass",
+    icon: "mdi:sass",
+    url: "https://sass-lang.com",
+  },
+  {
+    title: "Jest",
+    icon: "cib:jest",
+    url: "https://jestjs.io",
+  },
+  {
+    title: "Cypress",
+    icon: "simple-icons:cypress",
+    url: "https://www.cypress.io",
+  },
+];
+
+const backEndTechs: TechItem[] = [
+  {
+    title: "Java",
+    icon: "mdi:language-java",
+    url: "https://www.java.com",
+  },
+  {
+    title: "Spring",
+    icon: "simple-icons:spring",
+    url: "https://spring.io",
+  },
+  {
+    title: "python",
+    icon: "mdi:language-python",
+    url: "https://www.python.org",
+  },
+  {
+    title: "node.js",
+    icon: "simple-icons:nodedotjs",
+    url: "https://nodejs.org",
+  },
+  {
+    title: "MySQL",
+    icon: "simple-icons:mysql",
+    url: "https://www.mysql.com",
+  },
+  {
+    title: "MongoDB",
+    icon: "teenyicons:mongodb-outline",
+    url: "https://www.mongodb.com",
+  },
+];
+
+const toolsTechs: TechItem[] = [
+  {
+    title: "Git",
+    icon: "mdi:git",
+    url: "https://git-scm.com",
+  },
+  {
+    title: "Nx Workspace",
+    icon: "file-icons:nx",
+    url: "https://nx.dev",
+  },
+  {
+    title: "Agile - Scrum",
+    icon: "icon-park-outline:turn-around",
+    url: "https://www.scrum.org",
+  },
+  {
+    title: "Jira",
+    icon: "simple-icons:jirasoftware",
+    url: "https://www.atlassian.com/software/jira",
+  },
+  {
+    title: "Jenkins",
+    icon: "simple-icons:jenkins",
+    url: "https://www.jenkins.io",
+  },
+  {
+    title: "Bamboo",
+    icon: "simple-icons:bamboo",
+    url: "https://www.atlassian.com/software/bamboo",
+  },
+];
+---
+
+<ContentSection title="Stack Technique" id="technical-stack">
+  <Fragment slot="lead">
+    La stack web est immense, très diverse et en perpétuel mouvement. J'ai cotoyé <span class="text-primary">Angular</span> et son écosystème tout au long de mes expériences .. Mais pas que ! J'ai quelques cordes <span class="text-primary">Fullstack</span> à mon arc ...
+  </Fragment>
+  <TechList
+    items={frontEndTechs}
+    title="Front-End"
+  />
+  <TechList
+    items={backEndTechs}
+    title="Back-End"
+  />
+  <TechList
+    items={toolsTechs}
+    title="Tools"
+  />
+</ContentSection>

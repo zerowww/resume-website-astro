@@ -1,14 +1,13 @@
 ---
 import { Icon } from "astro-icon";
-import type { CompatibilityItem } from "~/types";
+import type { TechItem } from "~/types";
 
 export interface Props {
-  items: Array<CompatibilityItem>;
+  items: TechItem[];
   title: string;
-  url: string;
 }
 
-const { items, title, url } = Astro.props;
+const { items, title } = Astro.props;
 ---
 
 <div class="w-full max-w-6xl space-y-2">
@@ -31,7 +30,4 @@ const { items, title, url } = Astro.props;
       }
     </ul>
   </div>
-  <p class="text-sm text-right">
-    <a class="text-primary" href={url}> ...and more &rarr;</a>
-  </p>
 </div>

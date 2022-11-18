@@ -1,4 +1,4 @@
-export interface CompatibilityItem {
+export interface TechItem {
   icon: string;
   title: string;
   url: string;
