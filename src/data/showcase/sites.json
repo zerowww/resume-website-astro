@@ -1,32 +1,32 @@
 [
   {
-    "title": "PoliNations",
-    "image": "./images/polinations.png",
-    "url": "https://polinations.com/"
+    "title": "AirFrance - Travel Guide",
+    "image": "./images/airfrance-travel-guide.webp",
+    "url": "https://wwws.airfrance.fr/travel-guide/destinations"
   },
   {
-    "title": "Astro Docs",
-    "image": "./images/astro-docs.png",
-    "url": "https://docs.astro.build/"
+    "title": "KLM - Travel Guide",
+    "image": "./images/klm-travel-guide.webp",
+    "url": "https://www.klm.nl/en/travel-guide/inspiration/pomp-and-circumstance-in-schonbrunn-palace"
   },
   {
-    "title": "<div>RIOTS",
-    "image": "./images/divriots.png",
-    "url": "https://divriots.com/"
+    "title": "Airbus Aircraft",
+    "image": "./images/airbus-aircraft.webp",
+    "url": "https://www.airbus.com"
   },
   {
-    "title": "Designcember",
-    "image": "./images/designcember.png",
-    "url": "https://designcember.com/"
+    "title": "Airbus Defense & Space",
+    "image": "./images/airbus-defense-and-space.webp",
+    "url": "https://www.airbus.com/en/products-services/space"
   },
   {
-    "title": "The Firebase Blog",
-    "image": "./images/firebase-blog.png",
-    "url": "https://firebase.blog/"
+    "title": "Banque Populaire",
+    "image": "./images/banque-populaire.webp",
+    "url": "https://www.banquepopulaire.fr"
   },
   {
-    "title": "Corset",
-    "image": "./images/corset.png",
-    "url": "https://corset.dev/"
+    "title": "Inetum",
+    "image": "./images/inetum.webp",
+    "url": "https://www.inetum.com"
   }
 ]

@@ -3,7 +3,7 @@
 import type { ShowcaseSite } from "~/types";
 import sitesData from "./sites.json";
 
-const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg}", {
+const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg,webp}", {
   eager: true,
   import: "default",
 });

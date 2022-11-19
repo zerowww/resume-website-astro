@@ -8,18 +8,16 @@ const sites = await getShowcase();
 
 <ContentSection title="Clients" id="clients">
   <Fragment slot="lead">
-    Astro is <span class="text-primary">versatile</span>.{" "}
-    <span class="text-primary">Explore</span> what's possible and get{" "}
-    <span class="text-primary">inspired</span>.
+    Clients grand compte, méthodes agiles, SCRUM, <span class="text-primary"
+      >SAFe</span
+    >, projets "from scratch", <span class="text-primary"
+      >autonomie complète</span
+    >, petites et grandes équipes .. J'ai eu la chance de pouvoir expérimenter
+    de nombreuses configurations de travail auprès de divers clients.
   </Fragment>
-  <div class="max-w-6xl space-y-2">
+  <div class="max-w-6xl">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {sites.map((site) => <ShowcaseCard site={site} />)}
     </div>
-    <p class="text-sm text-right">
-      <a class="text-primary" href="https://astro.build/showcase/">
-        ...and more &rarr;
-      </a>
-    </p>
   </div>
 </ContentSection>
