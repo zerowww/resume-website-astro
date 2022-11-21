@@ -25,6 +25,7 @@ export interface CallToAction {
   title: string;
   url: string;
   icon: string;
+  badge?: string;
   fileName?: string;
   target?: string;
 }
