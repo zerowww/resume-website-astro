@@ -25,7 +25,7 @@ export interface CallToAction {
   title: string;
   url: string;
   icon: string;
-  isDownloadingFile: boolean;
+  fileName?: string;
   target?: string;
 }
 
