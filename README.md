@@ -1,4 +1,4 @@
-[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build) [![Netlify Status](https://api.netlify.com/api/v1/badges/c90d5a0e-316a-4df6-9732-ec1177cb85a9/deploy-status)](https://app.netlify.com/sites/alexandremartinez/deploys)
 
 # Astro Landing Page
 
