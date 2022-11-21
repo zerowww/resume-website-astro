@@ -8,9 +8,9 @@ const allImages = import.meta.glob<ImageMetadata>("./images/*.{png,jpg,jpeg,webp
   import: "default",
 });
 
-let _loadShowcase: Promise<Array<ShowcaseSite>>;
+let _loadShowcase: Promise<ShowcaseSite[]>;
 
-async function loadShowcase(): Promise<Array<ShowcaseSite>> {
+async function loadShowcase(): Promise<ShowcaseSite[]> {
   const sites = await Promise.all(
     sitesData.map(async (site) => {
       if (!(site.image in allImages)) {
