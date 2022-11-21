@@ -22,6 +22,9 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
       },
+      maxWidth: {
+        '90': '90%',
+      }
     },
   },
   corePlugins: {
