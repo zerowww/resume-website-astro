@@ -91,7 +91,7 @@ const callToActions: CallToAction[] = [
     {
       callToActions.map(({ title, url, icon, isDownloadingFile, target }) => (
         <a
-          class="flex items-center gap-3 text-sm border-2 border-current p-2 sm:pr-4"
+          class="call-to-action gradient-bg flex items-center gap-3 text-sm border-2 border-current p-2 sm:pr-4"
           href={url}
           target={target}
           download={isDownloadingFile}
@@ -115,11 +115,29 @@ const callToActions: CallToAction[] = [
   const menu = document.querySelector(`#${menuModalId} ul`);
   const openNavButton = document.querySelector("#open-nav-button");
   const closeNavButton = document.querySelector("#close-nav-button");
+  const callToActions = document.querySelectorAll(
+    ".call-to-action"
+  ) as NodeListOf<HTMLElement>;
+  let degree = 0;
+  let throttlePause = false;
 
   invariant(header, "header should not be null");
   invariant(menu, "menu should not be null");
   invariant(openNavButton, "openNavButton should not be null");
   invariant(closeNavButton, "closeNavButton should not be null");
+
+  const throttleUpdateCallToActionBgColor = () => {
+    if (throttlePause) return;
+    throttlePause = true;
+
+    setTimeout(() => {
+      callToActions.forEach((element: HTMLElement) => {
+      degree += 5;
+      element.style.filter = `hue-rotate(${degree}deg)`;
+    });
+      throttlePause = false;
+    }, 50);
+  };
 
   const openMenu = () => {
     MicroModal.show(menuModalId, { disableScroll: true });
@@ -135,7 +153,10 @@ const callToActions: CallToAction[] = [
   document.addEventListener("scroll", () => {
     const d = page.clientHeight - page.scrollTop - header.offsetHeight;
     header.classList.toggle("fixed-header", d < 0);
+
+    throttleUpdateCallToActionBgColor();
   });
+  document.addEventListener("touchmove", throttleUpdateCallToActionBgColor);
 
   menu.addEventListener("click", (event) => {
     if ((event.target as HTMLElement).tagName === "A") {

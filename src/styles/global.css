@@ -10,3 +10,20 @@ a,
   @apply text-transparent bg-clip-text;
   @apply bg-gradient-to-br from-green-500 via-blue-500 to-green-500;
 }
+
+.gradient-bg {
+  @apply hue-rotate-0;
+}
+
+.gradient-bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: 4px;
+  border-radius: inherit;
+  @apply bg-gradient-to-br from-green-500 via-blue-500 to-green-500;
+}
