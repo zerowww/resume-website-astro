@@ -1,10 +1,8 @@
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build) [![Netlify Status](https://api.netlify.com/api/v1/badges/c90d5a0e-316a-4df6-9732-ec1177cb85a9/deploy-status)](https://app.netlify.com/sites/alexandremartinez/deploys)
 
-# Astro Landing Page
+# My Online Resume
 
-> An Astro + Tailwind CSS example/template for landing pages.
-
-![Screenshots of Astro Landing Page](screenshots.jpg)
+> Built with Astro, this is my online resume where I present my services and my way of working :)
 
 ## Features
 
@@ -32,9 +30,6 @@
 | `npm run clean`        | Remove `node_modules` and build output             |
 
 ## Credits
+This project was forked from https://github.com/mhyfritz/astro-landing-page
 
-- astronaut image
-  - source: https://github.com/withastro/astro-og-image; note: this repo is not available anymore
-- moon image
-  - source: https://unsplash.com/@nasa
-- other than that, a lot of material (showcase data, copy) was taken from official Astro sources, in particular https://astro.build/blog/introducing-astro/ and https://github.com/withastro/astro.build
+Many thanks to the original authors !
