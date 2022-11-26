@@ -60,7 +60,7 @@ const callToActions: CallToAction[] = [
         class="btn lg:hidden"
         aria-label="Navigation"
       >
-        <Icon pack="mdi" name="menu" class="h-8" />
+        <Icon pack="mdi" name="menu" class="h-8" aria-hidden="true" />
       </button>
       <ThemeSwitcher />
     </div>
@@ -74,7 +74,7 @@ const callToActions: CallToAction[] = [
               class="btn"
               aria-label="Close navigation"
             >
-              <Icon pack="mdi" name="close" class="h-8" />
+              <Icon pack="mdi" name="close" class="h-8" aria-hidden="true" />
             </button>
           </header>
           <nav>
@@ -103,7 +103,7 @@ const callToActions: CallToAction[] = [
           target={target}
           download={fileName}
         >
-          <Icon name={icon} class="h-10" />
+          <Icon name={icon} class="h-10" aria-hidden="true" />
           <span
             style={!!badge ? "left: 0.93rem" : "display:none"}
             class="bg-default absolute scale-75 top-3 text-xs rounded px-1 leading-none gradient-bg"

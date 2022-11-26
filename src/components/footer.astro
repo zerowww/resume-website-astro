@@ -40,7 +40,7 @@ const links: FooterLink[] = [
             href={link.url}
           >
             <span class="sr-only">{link.description}</span>
-            <Icon class="h-full" name={link.icon} />
+            <Icon class="h-full" name={link.icon} aria-hidden="true" />
           </a>
         </li>
       ))
