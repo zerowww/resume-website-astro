@@ -18,7 +18,7 @@ export interface FooterLink {
 
 export interface NavItem {
   title: string;
-  url: string;
+  url: stricompanyIcon
 }
 
 export interface CallToAction {
@@ -34,4 +34,16 @@ export interface ShowcaseSite {
   title: string;
   image: ImageMetadata;
   url: string;
+}
+
+export interface Referral {
+  content: string;
+  author: ReferralAuthor;
+}
+
+export interface ReferralAuthor {
+  name: string;
+  company: string;
+  position: string;
+  companyUrlIcon: string;
 }

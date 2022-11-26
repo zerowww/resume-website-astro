@@ -1,0 +1,113 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import type { Referral } from "~/types";
+import ContentSection from "./content-section.astro";
+
+const referrals: Referral[] = [
+  {
+    author: {
+      name: "Tania ETJEMESIAN",
+      company: "Bertek pour AirFrance - KLM",
+      position: "Product Owner",
+      companyUrlIcon: "/assets/images/companies/airfrance.jpeg",
+    },
+    content: `Alexandre c'est une personne sérieuse et compétente, toujours de bonne humeur, qui sait travailler de façon autonome mais aussi avec les autres membres de l'équipe.
+Avoir Alexandre dans son équipe est un vrai plaisir !`,
+  },
+  {
+    author: {
+      name: "Tahar HADHAB",
+      company: "Freelance pour Informatique Banque Populaire",
+      position: "Tech Lead",
+      companyUrlIcon: "/assets/images/companies/ibp.jpeg",
+    },
+    content: `Je recommande Alexandre car il est sérieux, rigoureux et essaye toujours de s'améliorer. 
+De plus, il s'est intégré rapidement dans l'équipe et a apporté sa bonne humeur quotidienne.`,
+  },
+  {
+    author: {
+      name: "Maxime BELZUNCE",
+      company: "Anciennement AirFrance - KLM",
+      position: "Bizdev & Expert Data visualisation - BI & Big data",
+      companyUrlIcon: "/assets/images/companies/airfrance.jpeg",
+    },
+    content:
+      "Professionnel, force de proposition, bienveillant, naturellement sympathique, très compétent (full stack angular), Alexandre apprends tres vite, contacte les bonnes personnes, et delivre un produit de bonne qualité. Sa bonne ambiance laisse un vide dans l'équipe.",
+  },
+  {
+    author: {
+      name: "Clément PASCAUD",
+      company: "AirFrance - KLM",
+      position: "Ingénieur Fullstack",
+      companyUrlIcon: "/assets/images/companies/airfrance.jpeg",
+    },
+    content:
+      "Alexandre, en plus de montrer une réelle motivation, a le gout du travail bien fait. Une expérience avérée respectant les bonnes pratiques en web design et intégration web doublée d'une productivité impressionnante pour qui développe à ses cotés.",
+  },
+  {
+    author: {
+      name: "Sylvain CORNU",
+      company: "Inetum",
+      position: "Directeur des programmes",
+      companyUrlIcon: "/assets/images/companies/inetum.jpeg",
+    },
+    content:
+      "Alexandre a réussit sa reconversion professionnelle, et a montré une réelle motivation en évoluant sur un poste de développeur informatique.",
+  },
+];
+---
+
+<ContentSection title="Recommendations" id="referrals">
+  <Fragment slot="lead">
+    Ces recommendations sont directement tirées de mon <a
+      class="text-primary"
+      target="_blank"
+      href="https://www.linkedin.com/in/alexandre-martinez31000"
+      >profil LinkedIn</a
+    >, vous pourrez les retrouver en bas de mon profil dans la Rubrique
+    Recommandations.
+  </Fragment>
+
+  <ul class="flex flex-col items-center gap-6">
+    {
+      referrals.map(
+        ({
+          content,
+          author: { companyUrlIcon, company, name, position },
+        }: Referral) => (
+          <li>
+            <figure class="mx-auto max-w-screen-md text-center">
+              <Icon
+                name="mdi:format-quote-open-outline"
+                class="mx-auto mb-3 w-12 h-12"
+              />
+              <blockquote>
+                <p class="text-xl italic font-medium">
+                  "{content}"
+                </p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center mt-6 space-x-3">
+                <Image
+                  class="w-6 h-6 rounded-full"
+                  src={companyUrlIcon}
+                  alt="referral author company picture"
+                  width={24}
+                  height={24}
+                />
+                <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                  <cite class="pr-3 font-medium">
+                    {name}
+                  </cite>
+                  <cite class="pl-3 text-sm font-light">
+                    {position} chez {company}
+                  </cite>
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+        )
+      )
+    }
+  </ul>
+</ContentSection>
