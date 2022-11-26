@@ -20,17 +20,9 @@ const callToActions: CallToAction[] = [
   },
   {
     title: "CV",
-    icon: "bi:cloud-download",
-    fileName: `CV FR Freelance Angular Tech Lead Développeur Fullstack MARTINEZ Alexandre`,
-    url: "/assets/docs/FR_Resume_Freelance_Angular_Tech_Lead_Fullstack_Developer_MARTINEZ_Alexandre.pdf",
-    badge: "FR",
-  },
-  {
-    title: "Resume",
-    icon: "bi:cloud-download",
-    fileName: `EN Resume Freelance Angular Tech Lead Fullstack Developer MARTINEZ Alexandre`,
-    url: "/assets/docs/EN_Resume_Freelance_Angular_Tech_Lead_Fullstack_Developer_MARTINEZ_Alexandre.pdf",
-    badge: "EN",
+    icon: "ic:baseline-download",
+    fileName: `CV FR/EN Freelance Angular Tech Lead Développeur Fullstack MARTINEZ Alexandre`,
+    url: "/assets/docs/FR_CV_EN_Resume_Freelance_Angular_Tech_Lead_Fullstack_Developer_MARTINEZ_Alexandre.zip",
   },
 ];
 ---
@@ -96,7 +88,7 @@ const callToActions: CallToAction[] = [
   </div>
   <div class="flex gap-4 sm:gap-6 -z-10">
     {
-      callToActions.map(({ title, url, icon, fileName, target, badge }) => (
+      callToActions.map(({ title, url, icon, fileName, target }) => (
         <a
           class="flex relative items-center sm:gap-3 text-sm border-2 border-current p-2 sm:pr-4"
           href={url}
@@ -104,12 +96,6 @@ const callToActions: CallToAction[] = [
           download={fileName}
         >
           <Icon name={icon} class="h-10" aria-hidden="true" />
-          <span
-            style={!!badge ? "left: 0.93rem" : "display:none"}
-            class="bg-default absolute scale-75 top-3 text-xs rounded px-1 leading-none gradient-bg"
-          >
-            {badge}
-          </span>
           <span class="hidden sm:block">{title}</span>
         </a>
       ))

@@ -7,13 +7,18 @@ const today = new Date();
 
 <ContentSection title="En Résumé" id="core-informations">
   <Fragment slot="lead">
-    À ce jour {today.toLocaleDateString('fr-FR')}, je suis <span class="text-primary"
-      >indisponible</span
-    > au recrutement sous contrat freelance. Je suis <span
-      class="text-primary">en poste de Tech Lead</span
-    > autour de l'écosystème <span class="text-primary">Angular</span>.
-    Vous trouverez ci-dessous mes CV en anglais et français ainsi qu'un lien direct amenant à mon profil LinkedIn.
-    <Icon name="ic:round-arrow-circle-down" class="h-8 mx-auto" aria-hidden="true" />
+    À ce jour {today.toLocaleDateString("fr-FR")}, je suis <span
+      class="text-primary">indisponible</span
+    > au recrutement sous contrat freelance. Je suis <span class="text-primary"
+      >en poste de Tech Lead</span
+    > autour de l'écosystème <span class="text-primary">Angular</span>. Vous
+    trouverez ci-dessous mes CV en anglais et français ainsi qu'un lien direct
+    amenant à mon profil LinkedIn.
+    <Icon
+      name="ic:round-arrow-circle-down"
+      class="h-8 mx-auto"
+      aria-hidden="true"
+    />
   </Fragment>
 
   <div class="flex flex-wrap items-center justify-center gap-2">
@@ -26,20 +31,28 @@ const today = new Date();
       <span>Profil LinkedIn</span>
     </a>
     <a
-    class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
-      href="/assets/docs/FR_Resume_Freelance_Angular_Tech_Lead_Fullstack_Developer_MARTINEZ_Alexandre.pdf"
-      download="CV FR Freelance Angular Tech Lead Développeur Fullstack MARTINEZ Alexandre"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+      href="https://docs.google.com/document/d/106fEk5HFMw7Kw-XQlGhybppV5EcTcGyXccTm65qUn14/edit?usp=sharing"
+      target="_blank"
     >
-      <Icon pack="mdi" name="file-document" class="h-8" aria-hidden="true" />
-      <span>Télécharger le CV</span>
+      <Icon name="ri:external-link-line" class="h-8" aria-hidden="true" />
+      <span>CV FR</span>
     </a>
     <a
-    class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
-      href="/assets/docs/EN_Resume_Freelance_Angular_Tech_Lead_Fullstack_Developer_MARTINEZ_Alexandre.pdf"
-      download="EN Resume Freelance Angular Tech Lead Fullstack Developer MARTINEZ Alexandre"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+      href="https://docs.google.com/document/d/1kjPOhHGbmTifCwCzQ1YsMvz1pj3n2rrp3ANJKXSwCgc/edit?usp=sharing"
+      target="_blank"
     >
-      <Icon pack="mdi" name="file-document" class="h-8" aria-hidden="true" />
-      <span>Download Resume</span>
+      <Icon name="ri:external-link-line" class="h-8" aria-hidden="true" />
+      <span>CV EN</span>
+    </a>
+    <a
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+      href="/assets/docs/FR_CV_EN_Resume_Freelance_Angular_Tech_Lead_Fullstack_Developer_MARTINEZ_Alexandre.zip"
+      download="CV FR/EN Freelance Angular Tech Lead Développeur Fullstack MARTINEZ Alexandre"
+    >
+      <Icon name="ic:baseline-download" class="h-8" aria-hidden="true" />
+      <span>Télécharger les CV</span>
     </a>
   </div>
 </ContentSection>
